@@ -1,17 +1,21 @@
-package practice;
+package practice.domain;
+
+import practice.domain.Movie;
+import practice.domain.MovieFinder;
 
 import java.util.List;
 
 
-public class MovieSearchApplicationTest {
+public class MovieFinderTest {
 
 	public static void main(String[] args) {
-		MovieSearchApplication application = new MovieSearchApplication();
-		
-		List<Movie> result = application.directedBy("Michael Bay");
+		MovieFinder movieFinder = new MovieFinder();
+
+
+		List<Movie> result = movieFinder.directedBy("Michael Bay");
 		assertEquals(3, result.size());
 
-        result = application.releasedYearBy(2015);
+        result = movieFinder.releasedYearBy(2015);
         assertEquals(225, result.size());
 	}
 	

@@ -1,4 +1,4 @@
-package practice;
+package practice.domain;
 
 import java.net.URL;
 import java.time.LocalDate;
