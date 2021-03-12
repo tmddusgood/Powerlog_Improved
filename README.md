@@ -23,3 +23,14 @@
   * MovieFinder.class 는 2가지 일을 한다.
     * csv를 읽고, 영화를 찾는다.
     * 따라서 Read와 Find로 구분할 수 있겠다.
+## is-a (상속) vs has-a (합성)
+* 이 때 Read에서 csv와 xml을 읽는다고 했을 때
+  * 상속으로 해결해본다면?
+    * abstract class MovieFinder를 XmlMovieFinder와 CsvMovieFinder가 상속받아 구현하게 만들 수 있다.
+      * 그러나 이는 캡슐화를 위반한다
+      * 설계의 유연성을 해친다. (코드 재사용이 힘들 수 있다. abstract class는 모든 메서드가 추상 메서드이니까)
+  * 합성으로 해결해본다면?
+    * 합성은 다르객체의 인스턴스를 자신의 인스턴스 변수로 포함하는 방법. 이 때 참조하는 방법은 인터페이스로!
+    * MovieFinder가 MovieReader를 사용하는데, 이 때 MovieReader만 인터페이스로 선언하여 다음을 둔다.
+      * CsvMovieReader
+      * XmlMovieReader
