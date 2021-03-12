@@ -24,6 +24,7 @@
     * csv를 읽고, 영화를 찾는다.
     * 따라서 Read와 Find로 구분할 수 있겠다.
 ## is-a (상속) vs has-a (합성)
+* 이 부분에 대한 추가 설명을 문서로 만드는 것이 좋겠다.
 * 이 때 Read에서 csv와 xml을 읽는다고 했을 때
   * 상속으로 해결해본다면?
     * abstract class MovieFinder를 XmlMovieFinder와 CsvMovieFinder가 상속받아 구현하게 만들 수 있다.
