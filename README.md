@@ -1,8 +1,7 @@
-# Spring, JSP, Servlet 학습 프로젝트
-## Movie Search - GOD Object Anti-Pattern 리팩토링
-### 관심사의 분리(Seperate of Concerns, SoC)와 계층화
+# Movie Search - GOD Object Anti-Pattern 리팩토링을 통한 Spring 학습
+## 관심사의 분리(Seperate of Concerns, SoC)와 계층화
 * 관심이 같은 것은 한 곳으로 모으고, 다른 것은 따로 떨어뜨려 서로 영향을 주지 않도록 분리한다.
-### 계층 구조 (엔터프라이즈 애플리케이션 계층화)
+## 계층 구조 (엔터프라이즈 애플리케이션 계층화)
 * 프레젠테이션
   * HTML 기반 웹 ui나 모바일 앱으로 만들어지는 경우가 많다.
   * 데스크톱이나 명령줄 기반 클라이언트 역시 있음
@@ -12,7 +11,15 @@
   * 비즈니스 논리라고도 부를 수 있다
   * 핵심 업무를 처리하는 객체들로 구성이 된다.
 * 데이터 원본
-### MovieSearch 프로젝트의 관심사
+## MovieSearch 프로젝트의 관심사
 1. 사용자의 명령을 입력 받아 비즈니스 로직을 실행하고, 결과를 출력한다.
 2. csv 파일로 작성된 영화 메타데이터를 읽어들인 후 조건에 맞는 영화를 검색한다.
 3. 파일 또는 데이터베이스 시스템 등과 데이터 송/수신을 처리한다.
+## 계층화와 관심사의 분리
+* 계층화
+  * domain 계층을 추가하여 Movie.class 를 옮겼다.
+  * domain 계층에 MovieFinder.class를 추가하여 MovieSearchApplication에서 수행하던 작업을 분리했다.
+* 관심사의 분리
+  * MovieFinder.class 는 2가지 일을 한다.
+    * csv를 읽고, 영화를 찾는다.
+    * 따라서 Read와 Find로 구분할 수 있겠다.
