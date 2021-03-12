@@ -23,6 +23,10 @@
   * MovieFinder.class 는 2가지 일을 한다.
     * csv를 읽고, 영화를 찾는다.
     * 따라서 Read와 Find로 구분할 수 있겠다.
+## 개발 시 유의사항
+* 쉽게 변경할 수 있는 코드를 짜야 한다 
+* Read에서 csv와 xml을 읽는다고 한다면
+  * 그런 의미에서 if문 분기로서 reader에서 csv와 xml를 구분해서는 안 된다! 
 ## is-a (상속) vs has-a (합성)
 * 이 부분에 대한 추가 설명을 문서로 만드는 것이 좋겠다.
 * 이 때 Read에서 csv와 xml을 읽는다고 했을 때
@@ -35,3 +39,5 @@
     * MovieFinder가 MovieReader를 사용하는데, 이 때 MovieReader만 인터페이스로 선언하여 다음을 둔다.
       * CsvMovieReader
       * XmlMovieReader
+  * 상속 vs 합성
+    * 만약 상속인 상태에서 
