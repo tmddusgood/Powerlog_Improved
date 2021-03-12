@@ -45,3 +45,7 @@
       * 매번 기능이 추가될 때마다 새로운 Finder가 추가되는 것이다.
     * 합성인 상태에서 json Read가 추가된다면?
       * MovieReader 인터페이스의 새로운 구현체에서 loadMovies()만 override 해주면 끝!
+## JAXB(Java Architecture for XML Binding)
+### 자바 클래스를 XML로 표현하는 자바 표준 API
+* Marshalling : 자바 객체 -> XML 문서
+* Unmarshalling : XML 문서 -> 자바 객체
