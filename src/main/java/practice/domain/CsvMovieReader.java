@@ -18,7 +18,7 @@ import practice.util.FileSystemUtils;
 public class CsvMovieReader implements MovieReader {
 
     /**
-     * 영화 메타데이터를 읽어 저장된 영화 목록을 불러온다.
+     * 영화 메타데이터를 읽어 저장된 영화 목록을 불러온다. 추상 클래스를 상속하여 implements로 구현한다.
      *
      * @return 불러온 영화 목록
      */
