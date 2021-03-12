@@ -25,7 +25,7 @@
     * 따라서 Read와 Find로 구분할 수 있겠다.
 ## 개발 시 유의사항
 * 쉽게 변경할 수 있는 코드를 짜야 한다 
-* Read에서 csv와 xml을 읽는다고 한다면
+* Read에서 csv와 xml을 읽는다고 한다 
   * 그런 의미에서 if문 분기로서 reader에서 csv와 xml를 구분해서는 안 된다! 
 ## is-a (상속) vs has-a (합성)
 * 이 부분에 대한 추가 설명을 문서로 만드는 것이 좋겠다.
@@ -40,4 +40,8 @@
       * CsvMovieReader
       * XmlMovieReader
   * 상속 vs 합성
-    * 만약 상속인 상태에서 
+    * 만약 상속인 상태에서 json Read 기능이 또 추가된다면?
+      * abstract class MovieFinder를 상속받아서 혹은 일반 상속이라 하더라도 '클래스의 폭발' 문제가 생긴다
+      * 매번 기능이 추가될 때마다 새로운 Finder가 추가되는 것이다.
+    * 합성인 상태에서 json Read가 추가된다면?
+      * MovieReader 인터페이스의 새로운 구현체에서 loadMovies()만 override 해주면 끝!
