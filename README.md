@@ -1,5 +1,4 @@
-#Spring, JSP, Servlet 학습 프로젝트
-
+# Spring, JSP, Servlet 학습 프로젝트
 ## Movie Search - GOD Object Anti-Pattern 리팩토링
 ### 관심사의 분리(Seperate of Concerns, SoC)와 계층화
 * 관심이 같은 것은 한 곳으로 모으고, 다른 것은 따로 떨어뜨려 서로 영향을 주지 않도록 분리한다.
