@@ -31,17 +31,18 @@
 * 이 부분에 대한 추가 설명을 문서로 만드는 것이 좋겠다.
 * 이 때 Read에서 csv와 xml을 읽는다고 했을 때
   * 상속으로 해결해본다면?
+    ![Alt text](img/상속.png)
     * abstract class MovieFinder를 XmlMovieFinder와 CsvMovieFinder가 상속받아 구현하게 만들 수 있다.
       * 그러나 이는 캡슐화를 위반한다
       * 설계의 유연성을 해친다. (코드 재사용이 힘들 수 있다. abstract class는 모든 메서드가 추상 메서드이니까)
   * 합성으로 해결해본다면?
+    ![Alt text](img/합성.png)
     * 합성은 다르객체의 인스턴스를 자신의 인스턴스 변수로 포함하는 방법. 이 때 참조하는 방법은 인터페이스로!
     * MovieFinder가 MovieReader를 사용하는데, 이 때 MovieReader만 인터페이스로 선언하여 다음을 둔다.
       * CsvMovieReader
       * XmlMovieReader
   * 상속 vs 합성
     * 만약 상속인 상태에서 json Read 기능이 또 추가된다면?
-      ![Alt text](img/상속)
       * abstract class MovieFinder를 상속받아서 혹은 일반 상속이라 하더라도 '클래스의 폭발' 문제가 생긴다
       * 매번 기능이 추가될 때마다 새로운 Finder가 추가되는 것이다.
     * 합성인 상태에서 json Read가 추가된다면?
