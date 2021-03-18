@@ -41,6 +41,7 @@
       * XmlMovieReader
   * 상속 vs 합성
     * 만약 상속인 상태에서 json Read 기능이 또 추가된다면?
+      ![Alt text](img/상속)
       * abstract class MovieFinder를 상속받아서 혹은 일반 상속이라 하더라도 '클래스의 폭발' 문제가 생긴다
       * 매번 기능이 추가될 때마다 새로운 Finder가 추가되는 것이다.
     * 합성인 상태에서 json Read가 추가된다면?
