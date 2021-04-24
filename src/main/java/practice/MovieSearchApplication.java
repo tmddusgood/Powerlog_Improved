@@ -22,6 +22,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import practice.domain.CsvMovieReader;
 import practice.domain.Movie;
 import practice.domain.MovieFinder;
 import practice.util.FileSystemUtils;
@@ -42,7 +43,7 @@ public class MovieSearchApplication {
      */
 
     public void run(String[] args) throws Exception {
-        final MovieFinder movieFinder = new MovieFinder();
+        final MovieFinder movieFinder = new MovieFinder(new CsvMovieReader());
         final AtomicBoolean running = new AtomicBoolean(true);
         final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         final PrintWriter output = new PrintWriter(System.out, false);
