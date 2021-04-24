@@ -43,7 +43,8 @@ public class MovieSearchApplication {
      */
 
     public void run(String[] args) throws Exception {
-        final MovieFinder movieFinder = new MovieFinder(new CsvMovieReader());
+        final MovieFactory movieFactory = new MovieFactory();
+        final MovieFinder movieFinder = movieFactory.movieFinder();
         final AtomicBoolean running = new AtomicBoolean(true);
         final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         final PrintWriter output = new PrintWriter(System.out, false);
