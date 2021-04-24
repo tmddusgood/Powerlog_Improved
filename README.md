@@ -51,3 +51,4 @@
 ### 자바 클래스를 XML로 표현하는 자바 표준 API
 * Marshalling : 자바 객체 -> XML 문서
 * Unmarshalling : XML 문서 -> 자바 객체
+###Junit을 이용한 테스트 코드 작성
