@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+@DisplayName("JaxbReader 테스트")
 public class JaxbMovieReaderTest {
 
-    @DisplayName("JaxbReader 정상 작동 테스트")
+    @DisplayName("JaxbReader 기댓값 테스트")
     @Test
     void NotEmpty_LoadMovies() {
         JaxbMovieReader movieReader = new JaxbMovieReader();

@@ -52,3 +52,5 @@
 * Marshalling : 자바 객체 -> XML 문서
 * Unmarshalling : XML 문서 -> 자바 객체
 ###Junit을 이용한 테스트 코드 작성
+* gradle.build에 dependency 추가
+* test{}에 JUnit5 플랫폼을 사용할 것을 명시
